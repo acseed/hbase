@@ -55,7 +55,7 @@ pipeline {
   post {
     always {
       // Has to be relative to WORKSPACE.
-      archiveArtifacts artifacts: "${env.OUTPUT_DIR_RELATIVE_REPORT}/includes,${env.OUTPUT_DIR_RELATIVE_REPORT}/excludes,${env.OUTPUT_DIR_RELATIVE_REPORT}/dashboard.html"
+      archiveArtifacts artifacts: "${env.OUTPUT_DIR_RELATIVE_REPORT}/*"
       publishHTML target: [
         allowMissing: true,
         keepAll: true,
